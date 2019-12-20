@@ -1,0 +1,80 @@
+{
+    "name": "TrueVault",
+    "description": "TrueVault is a HIPAA compliant data store. We offer healthcare applications a secure API to store protected health information (PHI). TrueVault handles all of the technical requirements mandated by the HIPAA Security Rule. Typical integration takes day...",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/10375-truevault.jpg",
+    "tags": [
+        "have api",
+        "healthcare"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/truevault\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "TrueVault",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/10375-truevault.jpg",
+            "humanURL": "https:\/\/www.truevault.com\/",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/truevault-postman-collection.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Base",
+            "url": "https:\/\/api.truevault.com"
+        },
+        {
+            "type": "Blog",
+            "url": "https:\/\/www.truevault.com\/blog\/index.html"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/truevault"
+        },
+        {
+            "type": "Developers",
+            "url": "https:\/\/www.truevault.com\/documentation\/"
+        },
+        {
+            "type": "Email",
+            "url": "hello@truevault.com"
+        },
+        {
+            "type": "Email",
+            "url": "help@truevault.com"
+        },
+        {
+            "type": "Email",
+            "url": "info@truevault.com"
+        },
+        {
+            "type": "Email",
+            "url": "compliance@truevault.com"
+        },
+        {
+            "type": "Email",
+            "url": "legal@truevault.com"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/truevault"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/TrueVault"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/www.truevault.com\/"
+        }
+    ]
+}
