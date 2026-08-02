@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.truevault.com/
+versioning:
+  scheme: uri-path
+  current: v1
+  docs: https://docs.truevault.com/Overview.html
+deprecation:
+  policy_url: null
+  sunset_header: false
+  detail: No formal deprecation/sunset-header policy is published for the REST API.
+sla:
+  url: null
+  uptime_target: null
+status_page: https://status.truevault.com/
+status_page_provider: Better Stack
+changelog: https://docs.truevault.com/Changelog.html
+deprecated_operations: []
+notes: >-
+  TrueVault publishes a hosted status page (status.truevault.com, Better Stack)
+  and a dated changelog. The REST API changelog's most recent entry is 2017,
+  indicating the TrueVault Safe API surface is stable/mature.

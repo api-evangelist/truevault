@@ -1,0 +1,19 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.truevault.com/Changelog.html
+scheme: date-based
+current_version: v1
+detail: >-
+  TrueVault Safe maintains a dated changelog in its REST API docs. Dates below
+  are captured from the changelog index (recent window); the most recent entry
+  is 2017-09-19, reflecting a stable/mature API surface. Per-entry highlights
+  are not transcribed here — see the source for full notes.
+entries:
+- date: '2017-09-19'
+- date: '2017-09-01'
+- date: '2017-01-26'
+- date: '2016-07-28'
+- date: '2015-12-15'
+- date: '2015-11-06'
+- date: '2015-10-30'
+- date: '2015-07-08'

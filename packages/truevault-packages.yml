@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.npmjs.com/~truevault
+packages:
+- language: javascript
+  registry: npm
+  name: tv-js-sdk
+  url: https://www.npmjs.com/package/tv-js-sdk
+  repository: https://github.com/truevault/tv-js-sdk
+  install: npm install tv-js-sdk
+  version: 0.1.1
+  description: The official TrueVault JavaScript SDK (published by the truevault npm org).
+  official: true
+- language: javascript
+  registry: npm
+  name: truevault-js-sdk
+  url: https://www.npmjs.com/package/truevault-js-sdk
+  repository: https://github.com/truevault/truevault-js-sdk
+  install: npm install truevault-js-sdk
+  version: 0.3.0
+  description: Earlier official TrueVault JS SDK, now marked deprecated in favor of tv-js-sdk.
+  official: true
+  deprecated: true
+notes: >-
+  No first-party TrueVault package was found on PyPI, Maven Central, NuGet,
+  pkg.go.dev, RubyGems, Packagist, or crates.io as of the search date; the only
+  official client libraries are the JavaScript SDKs published under the truevault
+  GitHub/npm org.

@@ -1,0 +1,37 @@
+# TrueVault
+
+> TrueVault provides developer infrastructure for storing and managing sensitive personal data in a compliant way. TrueVault Safe is a HIPAA-oriented REST API and secure datastore (Vaults, Documents, BLOBs, Users, Schemas, Search, Messaging, Scoped Access Tokens) authenticated with API keys or user access tokens via HTTP Basic. TrueVault's Polaris product is privacy-compliance software for ecommerce (US state privacy laws, GDPR, CCPA). Y Combinator-backed.
+
+## APIs
+
+- [TrueVault Safe REST API](https://docs.truevault.com/): REST datastore for sensitive data. Base URL https://api.truevault.com/v1. Resources: Users, Groups (Access Grid), Vaults, BLOBs, Documents, Schemas, Search, Messaging (Email/SMS), Password Reset Flows, Scoped Access Tokens.
+
+## Docs
+
+- [Documentation](https://docs.truevault.com/): TrueVault Safe REST API reference.
+- [Overview & Authentication](https://docs.truevault.com/Overview.html): Resource URIs, HTTP Basic auth with API key or access token, response/error envelopes, usage metering.
+- [Changelog](https://docs.truevault.com/Changelog.html): Dated REST API changelog.
+
+## Developer
+
+- [Management Console](https://console.truevault.com/): Portal for account, users, and API keys.
+- [Sign Up](https://console.truevault.com/register): Create a TrueVault account.
+- [GitHub](https://github.com/truevault): TrueVault open-source org, including the official JavaScript SDK (tv-js-sdk).
+- [Status](https://status.truevault.com/): Hosted service status page.
+- [Pricing](https://www.truevault.com/pricing): Operation- and storage-based billing.
+
+## Artifacts
+
+- [Authentication](authentication/truevault-authentication.yml)
+- [Conventions](conventions/truevault-conventions.yml)
+- [Error envelope](errors/truevault-problem-types.yml)
+- [Lifecycle](lifecycle/truevault-lifecycle.yml)
+- [Changelog](changelog/truevault-changelog.yml)
+- [Packages / SDKs](packages/truevault-packages.yml)
+- [Conformance](conformance/truevault-conformance.yml)
+- [MCP (candidate)](mcp/truevault-mcp.yml)
+
+## Legal
+
+- [Terms](https://www.truevault.com/legal/terms)
+- [Privacy Policy](https://privacy.truevault.com/privacy-policy)

@@ -1,0 +1,48 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.truevault.com/Overview.html
+format: truevault-error-envelope
+envelope:
+  detail: >-
+    TrueVault does not use RFC 9457 problem+json. Errors are returned as a JSON
+    object with result "error", a transaction_id, and an "error" object with
+    numeric code, human message, and machine-readable type.
+  fields:
+    result: error
+    transaction_id: server-generated UUID
+    error:
+      code: numeric HTTP-aligned code
+      message: human-readable description
+      type: machine-readable error category (e.g. invalid_request_error)
+status_classes:
+  - class: 2xx
+    meaning: success
+  - class: 4xx
+    meaning: client error (invalid input, auth, permissions, not found)
+  - class: 5xx
+    meaning: server error (unexpected input may occasionally surface here; contact support)
+problems:
+- status: 400
+  type: invalid_request_error
+  title: Invalid request
+  detail: Missing required fields or malformed input.
+  source: https://docs.truevault.com/Overview.html
+- status: 401
+  type: unauthorized
+  title: Unauthorized
+  detail: Missing or invalid API key / access token in the Basic Authorization header.
+- status: 403
+  type: forbidden
+  title: Forbidden
+  detail: The authenticated user's Group policies (Access Grid) do not grant the requested activity on the resource.
+- status: 404
+  type: not_found
+  title: Resource not found
+  detail: The referenced vault, document, user, group, schema, or BLOB id does not exist.
+- status: 500
+  type: server_error
+  title: Server error
+  detail: Unexpected server-side error; TrueVault recommends contacting support via the Console support widget.
+notes: >-
+  Titles/types above are derived from the documented sample error envelope and
+  standard HTTP semantics; per-endpoint error tables in the docs enrich these.

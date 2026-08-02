@@ -1,0 +1,71 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.truevault.com/Overview.html
+docs: https://docs.truevault.com/Overview.html
+authentication:
+  style: http-basic
+  credentials: [api_key, access_token]
+  detail: >-
+    Credential is the Basic-auth username with an empty password; the
+    "<credential>:" string is Base64-encoded. See authentication/truevault-authentication.yml.
+base_url: https://api.truevault.com/v1
+resource_uri:
+  pattern: "{host}/{version}/{resource}"
+  detail: >-
+    A resource URI is composed of the host (https://api.truevault.com), the API
+    version (v1), and the resource identifier, e.g.
+    /v1/vaults/<vault_id>/documents/<document_id>. Resource ids are
+    server-generated UUIDs.
+idempotency:
+  supported: false
+  detail: >-
+    TrueVault Safe does not document an idempotency-key header or parameter.
+pagination:
+  supported: partial
+  detail: >-
+    List endpoints ("List all ...") support paging via page/per_page style
+    parameters documented per-endpoint; a canonical cursor convention is not
+    published catalog-wide.
+request_tracing:
+  field: transaction_id
+  location: response-body
+  detail: Every response includes a server-generated transaction_id for tracing/support.
+response_envelope:
+  detail: >-
+    Successful responses are JSON objects carrying "result": "success", a
+    "transaction_id", and the resource payload under a named key (e.g. "user").
+    Fields with no value are returned as null rather than omitted. Certain
+    Documents/BLOBs endpoints respond directly with an encoded object.
+  sample:
+    result: success
+    transaction_id: "00000000-0000-0000-0000-000000000000"
+error_envelope:
+  detail: >-
+    Error responses carry "result": "error", a "transaction_id", and an "error"
+    object with numeric "code", human "message", and machine "type" (e.g.
+    invalid_request_error). HTTP status codes follow 2xx/4xx/5xx semantics. See
+    errors/truevault-problem-types.yml.
+  sample:
+    error:
+      code: 400
+      message: "Invalid request. Missing required fields"
+      type: invalid_request_error
+    result: error
+    transaction_id: "00000000-0000-0000-0000-000000000000"
+versioning:
+  scheme: uri-path
+  current: v1
+  detail: Version is carried in the URI path (/v1/...). See lifecycle/truevault-lifecycle.yml.
+authorization:
+  model: group-policy-access-grid
+  detail: >-
+    Fine-grained access is granted through Group policies over an Access Grid
+    (activities per resource type and per resource id).
+usage_metering:
+  detail: >-
+    Accounts are billed per Operation and per BLOB storage. All API calls
+    consume at least one operation; list/search/multiget calls that return full
+    decrypted documents consume additional operations, while metadata-only list
+    calls consume a single operation.
+rate_limit_signal:
+  detail: Not documented as a discrete rate-limit header; usage is metered per operation (billing).

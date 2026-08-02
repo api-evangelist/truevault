@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: derived
+source: https://docs.truevault.com/Overview.html
+standards:
+- id: rest
+  conforms: true
+  evidence: Resource-oriented HTTP API over JSON with standard methods (list/create/read/update/delete).
+- id: http-basic-auth
+  conforms: true
+  evidence: RFC 7617 Basic Authorization header carries the API key or access token.
+- id: json
+  conforms: true
+  evidence: Requests and responses are JSON; responses use a result/transaction_id envelope.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors use a TrueVault-specific error envelope, not application/problem+json.
+- id: oauth2
+  conforms: false
+  evidence: No OAuth 2.0 securitySchemes; authorization is Group-policy based.
+- id: openapi
+  conforms: false
+  evidence: No published OpenAPI/Swagger definition found (docs are Sphinx/ReadTheDocs).
+- id: hipaa
+  conforms: unknown
+  evidence: >-
+    TrueVault Safe is marketed as HIPAA-oriented secure storage; a published
+    certification/attestation program was not verified during this pass.
+- id: geospatial-search
+  conforms: true
+  evidence: Search API documents geospatial point fields, distance search, and sorting.

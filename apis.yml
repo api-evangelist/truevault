@@ -1,22 +1,144 @@
 aid: truevault
-name: Truevault
-description: Truevault is a company surfaced as a portfolio company of y-combinator and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+name: TrueVault
+description: >-
+  TrueVault provides developer infrastructure for storing and managing sensitive
+  personal data in a compliant way. Its original product, TrueVault Safe, is a
+  HIPAA-oriented REST API and secure datastore that lets applications create
+  Vaults and store encrypted Documents, BLOBs, Users, and Schemas, with
+  group-based access control (the Access Grid), full-text and geospatial Search,
+  transactional Email/SMS messaging, password-reset flows, and scoped access
+  tokens. Authentication is via API keys or user access tokens passed in an HTTP
+  Basic header. TrueVault's newer Polaris product is privacy-compliance software
+  that helps ecommerce brands comply with US state privacy laws, the GDPR, and
+  the CCPA. TrueVault is a Y Combinator-backed company.
 url: https://raw.githubusercontent.com/api-evangelist/truevault/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://github.com/truevault.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - y-combinator
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enriched-from-public-surface
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 11
+  pass: local-v1
 tags:
 - Company
-apis: []
+- Data Privacy
+- Security
+- Compliance
+- HIPAA
+- Data Storage
+- Encryption
+- Identity
+- Privacy
+- PII
+apis:
+- aid: truevault:truevault-safe-api
+  name: TrueVault Safe REST API
+  humanURL: https://docs.truevault.com/
+  baseURL: https://api.truevault.com/v1
+  tags:
+  - Data Storage
+  - Security
+  - HIPAA
+  - Users
+  - Documents
+  - Search
+  properties:
+  - url: https://docs.truevault.com/
+    type: Documentation
+  - url: https://docs.truevault.com/
+    type: APIReference
+  - url: https://docs.truevault.com/Overview.html
+    type: GettingStarted
+  - url: authentication/truevault-authentication.yml
+    type: Authentication
+  - url: conventions/truevault-conventions.yml
+    type: Conventions
+  - url: errors/truevault-problem-types.yml
+    type: ErrorCatalog
+  description: >-
+    TrueVault Safe is a REST API and secure datastore for sensitive personal
+    data. Resources include Users, Groups (with policy-based Access Grid
+    permissions), Vaults, BLOBs, Documents, Schemas, Search (full-text and
+    geospatial), Messaging (Email and SMS), Password Reset Flows, and Scoped
+    Access Tokens. Requests are authenticated with an API key or user access
+    token via HTTP Basic; responses are JSON envelopes carrying result and
+    transaction_id. Base URL https://api.truevault.com/v1.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+- name: TrueVault
+  url: https://www.truevault.com
+common:
+- type: DeveloperPortal
+  url: https://console.truevault.com/
+- type: Documentation
+  url: https://docs.truevault.com/
+- type: APIReference
+  url: https://docs.truevault.com/
+- type: GettingStarted
+  url: https://docs.truevault.com/Overview.html
+- type: Support
+  url: https://www.truevault.com/contact
+- type: Blog
+  url: https://www.truevault.com/learn
+- type: GitHubOrganization
+  url: https://github.com/truevault
+- type: Pricing
+  url: https://www.truevault.com/pricing
+- type: SignUp
+  url: https://console.truevault.com/register
+- type: Login
+  url: https://console.truevault.com/
+- type: TermsOfService
+  url: https://www.truevault.com/legal/terms
+- type: PrivacyPolicy
+  url: https://privacy.truevault.com/privacy-policy
+- type: StatusPage
+  url: https://status.truevault.com/
+- type: Authentication
+  url: authentication/truevault-authentication.yml
+- type: Packages
+  url: packages/truevault-packages.yml
+- type: SDKs
+  url: packages/truevault-packages.yml
+- type: Conventions
+  url: conventions/truevault-conventions.yml
+- type: ErrorCatalog
+  url: errors/truevault-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/truevault-lifecycle.yml
+- type: ChangeLog
+  url: changelog/truevault-changelog.yml
+- type: Conformance
+  url: conformance/truevault-conformance.yml
+- type: MCPServer
+  url: mcp/truevault-mcp.yml
+  name: TrueVault MCP Server manifest (candidate)
+- type: LLMsTxt
+  url: llms/truevault-llms.txt
+- type: WellKnown
+  url: well-known/truevault-well-known.yml
+- type: DomainSecurity
+  url: security/truevault-domain-security.yml

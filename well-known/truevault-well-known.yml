@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+hosts:
+- host: https://www.truevault.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://docs.truevault.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://api.truevault.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+notes: >-
+  No /.well-known discovery documents, security.txt, or llms.txt were served on
+  the TrueVault website, docs, or API hosts as of the probe date. Absence is a
+  valid, recorded result.

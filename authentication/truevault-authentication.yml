@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.truevault.com/Overview.html
+docs: https://docs.truevault.com/Overview.html
+summary:
+  types: [apiKey, http]
+  api_key_in: [header]
+  http_schemes: [basic]
+  oauth2_flows: []
+  notes: >-
+    TrueVault Safe authenticates with either a long-lived API key or a
+    short-lived user access token. Both are supplied as the username in an HTTP
+    Basic Authorization header (the password is left empty and the
+    "<credential>:" string is Base64-encoded). There is no OAuth 2.0 / OIDC
+    surface; fine-grained authorization is handled by Group policies (the Access
+    Grid), not OAuth scopes.
+schemes:
+- name: apiKey
+  type: apiKey
+  in: header
+  scheme: basic
+  description: >-
+    A user's API_KEY is issued at user creation via the Management Console or
+    the Users API and does not expire unless explicitly expired. It is placed as
+    the Basic-auth username (colon appended, Base64-encoded). Recommended for
+    administrators, owners, and developers.
+  source: https://docs.truevault.com/Overview.html
+- name: accessToken
+  type: http
+  scheme: basic
+  description: >-
+    A user ACCESS_TOKEN is issued via the Users API or the /auth/login endpoint
+    (default 24-hour expiry, overridable with not_valid_after). Supplied as the
+    Basic-auth username. Recommended for regular end-users.
+  source: https://docs.truevault.com/Overview.html
+authorization:
+  model: group-policy
+  description: >-
+    Authorization is enforced by Group policies over an Access Grid: activities
+    (Create/Read/Update/Delete/etc.) are granted per resource type and per
+    resource id to the groups a user belongs to.
+  docs: https://docs.truevault.com/
