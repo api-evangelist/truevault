@@ -6,45 +6,49 @@ server:
   name: truevault-safe
   transport: http
   url: null
-  detail: >-
-    No official TrueVault MCP server was found (docs, npm @modelcontextprotocol,
-    MCP registries). The tool list below is a CANDIDATE surface derived from the
-    documented REST operations so an MCP server could be generated; it is not a
-    published TrueVault product.
+  detail: No official TrueVault MCP server was found (docs, npm @modelcontextprotocol, MCP registries).
+    The tool list below is a CANDIDATE surface derived from the documented REST operations so an MCP server
+    could be generated; it is not a published TrueVault product.
 tools:
 - name: create_user
   description: Create a User.
-  source_operation: "POST https://api.truevault.com/v1/users"
+  source_operation: POST https://api.truevault.com/v1/users
 - name: read_user
   description: Read a User by id.
-  source_operation: "GET https://api.truevault.com/v1/users/{user_id}"
+  source_operation: GET https://api.truevault.com/v1/users/{user_id}
 - name: list_users
   description: List all Users.
-  source_operation: "GET https://api.truevault.com/v1/users"
+  source_operation: GET https://api.truevault.com/v1/users
 - name: login_user
   description: Exchange username/password for a user access token.
-  source_operation: "POST https://api.truevault.com/v1/auth/login"
+  source_operation: POST https://api.truevault.com/v1/auth/login
 - name: create_vault
   description: Create a Vault.
-  source_operation: "POST https://api.truevault.com/v1/vaults"
+  source_operation: POST https://api.truevault.com/v1/vaults
 - name: list_vaults
   description: List all Vaults.
-  source_operation: "GET https://api.truevault.com/v1/vaults"
+  source_operation: GET https://api.truevault.com/v1/vaults
 - name: create_document
   description: Create a Document in a Vault.
-  source_operation: "POST https://api.truevault.com/v1/vaults/{vault_id}/documents"
+  source_operation: POST https://api.truevault.com/v1/vaults/{vault_id}/documents
 - name: read_document
   description: Read a Document.
-  source_operation: "GET https://api.truevault.com/v1/vaults/{vault_id}/documents/{document_id}"
+  source_operation: GET https://api.truevault.com/v1/vaults/{vault_id}/documents/{document_id}
 - name: search_documents
   description: Search Documents in a Vault (full-text / geospatial).
-  source_operation: "POST https://api.truevault.com/v1/vaults/{vault_id}/search"
+  source_operation: POST https://api.truevault.com/v1/vaults/{vault_id}/search
 - name: create_blob
   description: Create a BLOB in a Vault.
-  source_operation: "POST https://api.truevault.com/v1/vaults/{vault_id}/blobs"
+  source_operation: POST https://api.truevault.com/v1/vaults/{vault_id}/blobs
 - name: create_group
   description: Create a Group with an Access Grid policy.
-  source_operation: "POST https://api.truevault.com/v1/groups"
+  source_operation: POST https://api.truevault.com/v1/groups
 - name: send_email
   description: Send a templated email to a User (Messaging API).
-  source_operation: "POST https://api.truevault.com/v1/users/{user_id}/message/email"
+  source_operation: POST https://api.truevault.com/v1/users/{user_id}/message/email
+deployment:
+  mode: none
+  verified: derived
+  tools: 12
+  checked: '2026-08-12'
+  source: catalog MCP census
