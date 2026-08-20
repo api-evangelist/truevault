@@ -59,6 +59,13 @@ apis:
   - Data Storage
   - Security
   - HIPAA
+  - User
+  - Documents
+  - Search
+  tags_raw:
+  - Data Storage
+  - Security
+  - HIPAA
   - Users
   - Documents
   - Search
