@@ -110,6 +110,8 @@ maintainers:
 - name: TrueVault
   url: https://www.truevault.com
 common:
+- type: Website
+  url: https://www.truevault.com/
 - type: DeveloperPortal
   url: https://console.truevault.com/
 - type: Documentation
