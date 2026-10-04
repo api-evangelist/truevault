@@ -53,6 +53,16 @@ x-enrichment:
   pass: local-v1
 tags:
 - Company
+- Privacy
+- Security
+- Compliance
+- HIPAA
+- Data Storage
+- Encryption
+- Identity
+- PII
+tags_raw:
+- Company
 - Data Privacy
 - Security
 - Compliance
