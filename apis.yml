@@ -45,7 +45,7 @@ x-tier: profiled
 x-tier-reason: enriched-from-public-surface
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-21'
+modified: '2026-10-06'
 x-enrichment:
   date: '2026-07-21'
   status: enriched
@@ -120,6 +120,10 @@ maintainers:
 - name: TrueVault
   url: https://www.truevault.com
 common:
+- url: https://www.truevault.com/blog
+  type: Blog
+- url: https://www.truevault.com/blog/rss.xml
+  type: BlogRSS
 - type: Website
   url: https://www.truevault.com/
 - type: DeveloperPortal
